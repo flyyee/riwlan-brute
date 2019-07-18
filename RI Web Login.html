@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0208)https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:73:e2:10&client_mac=4e:80:df:6c:e8:08&wlan=RI-WLAN&redirect=www.msftconnecttest.com/redirect -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<!--<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">-->
+
+<title>RI Web Login</title>
+
+<!-- POP UP WINDOW -->
+<script language="javascript" type="text/javascript">
+<!--
+function popitup(url) {
+	newwindow=window.open(url,'Disclaimer','height=480px,width=640px, scrollbars=1, resizable=1');
+	if (window.focus) {newwindow.focus()}
+	return false;
+}
+// -->
+</script>
+
+<script type="text/javascript">
+<!--
+function entsub(event,login_form) {
+  if (event && event.which == 13)
+  	submitAction();
+    //login_form.submit();
+  else
+    return true;
+}
+//-->
+</script>
+
+<!-- FORM SCRIPT -->
+<script>
+function submitAction(){
+      var link = document.location.href;
+      var searchString = "redirect=";
+      var equalIndex = link.indexOf(searchString);
+      var redirectUrl = "";
+      var urlStr = "";
+      if(equalIndex > 0) {
+            equalIndex += searchString.length;
+            urlStr = link.substring(equalIndex);
+            if(urlStr.length > 0){
+				redirectUrl += urlStr;
+  			    if(redirectUrl.length > 255)
+				    redirectUrl = redirectUrl.substring(0,255);
+			    document.forms[0].redirect_url.value = redirectUrl;
+			}
+      }
+
+      document.forms[0].buttonClicked.value = 4;
+      document.forms[0].submit();
+}
+
+function loadAction(){
+      var url = window.location.href;
+      var args = new Object();
+      var query = location.search.substring(1);
+      var pairs = query.split("&");
+      for(var i=0;i<pairs.length;i++){
+          var pos = pairs[i].indexOf('=');
+          if(pos == -1) continue;
+          var argname = pairs[i].substring(0,pos);
+          var value = pairs[i].substring(pos+1);
+          args[argname] = unescape(value);
+      }
+      //alert( "AP MAC Address is " + args.ap_mac);
+      //alert( "The Switch URL is " + args.switch_url);
+      document.forms[0].action = args.switch_url;
+
+      // This is the status code returned from webauth login action
+      // Any value of status code from 1 to 5 is error condition and user
+      // should be shown error as below or modify the message as it suits
+      // the customer
+
+      if(args.statusCode == 1){
+        alert("You are already logged in. No further action is required on your part.");
+      }
+      else if(args.statusCode == 2){
+        alert("You are not configured to authenticate against web portal. No further action is required on your part.");
+      }
+      else if(args.statusCode == 3){
+        alert("The username specified cannot be used at this time. Perhaps the username is already logged into the system?");
+      }
+      else if(args.statusCode == 4){
+        alert("Wrong username and password. Please try again.");
+      }
+      else if(args.statusCode == 5){
+        alert("The User Name and Password combination you have entered is invalid. Please try again.");
+      }
+
+}
+
+</script>
+
+<link href="./RI Web Login_files/main.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" media="only screen and (max-device-width: 480px) and (orientation:landscape)" href="./RI Web Login_files/main-mobile-landscape.css">
+<!--[if lt IE 9]>
+<script>
+document.createElement('footer');
+document.createElement('header');
+</script>
+<![endif]-->
+
+</head>
+
+<body>
+<!-- Page-wrap -->
+<div id="page-wrap">
+
+<header>
+	<div class="header-wrapper clearfix">
+    	<a href="https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&amp;ap_mac=a0:ec:f9:73:e2:10&amp;client_mac=4e:80:df:6c:e8:08&amp;wlan=RI-WLAN&amp;redirect=www.msftconnecttest.com/redirect#"><img class="left" src="./RI Web Login_files/logo.png"></a>
+        <h1 class="left"><a href="https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&amp;ap_mac=a0:ec:f9:73:e2:10&amp;client_mac=4e:80:df:6c:e8:08&amp;wlan=RI-WLAN&amp;redirect=www.msftconnecttest.com/redirect#">Raffles Institution Wireless Network</a></h1>
+    </div>
+</header>
+
+<!-- Content -->
+<div id="content">
+
+    <form method="GET" action="https://riwlan.ri.edu.sg/login.html" class="login" id="login_form" onsubmit="return false">
+    <input type="hidden" name="buttonClicked" size="16" maxlength="15" value="0">
+    <input type="hidden" name="redirect_url" size="255" maxlength="255" value="">
+    <input type="hidden" name="err_flag" size="16" maxlength="15" value="0">
+    <input type="hidden" name="info_flag" size="16" maxlength="15" value="0">
+    <input type="hidden" name="info_msg" size="32" maxlength="31" value="0">
+        <h1>Login</h1>
+        <script>loadAction();</script>
+        <ul>
+            <li><label>Login ID:</label><input type="TEXT" name="username" size="25" maxlength="63" value="" onkeypress="return entsub(event,this.form)"></li>
+            <li><label>Password:</label><input type="Password" name="password" size="25" maxlength="24" onkeypress="return entsub(event,this.form)"></li>
+        </ul>
+        <p>
+
+	  <!--<input type="button" name="Submit" value="Submit" class="button auto-margin btn" onclick="submitAction();">-->
+      <input type="button" name="Submit" value="Submit" class="button auto-margin btn" onclick="submitAction(); return false;">
+
+        </p>
+</form>
+    
+    <p>&nbsp;</p>
+    <p class="center"><strong>Logging in as a registered user indicates you have read and accept the conditions in the "Terms of Use"</strong></p>
+    <p class="center">&nbsp;</p>
+    <p><a class="btn-disclaimer" href="https://riwlan.ri.edu.sg/fs/customwebauth/login/disclaimer.html" onclick="return popitup(&#39;login/disclaimer.html&#39;)">Terms of Use</a></p>
+</div>
+<!-- //Content -->
+
+<div class="push"></div>
+</div>
+<!-- //Page-wrap -->
+<div id="bg"></div>
+<footer class="center">
+	<p>© 2011 Raffles Institution.  One Raffles Institution Lane,  Singapore 575954<br>ALL RIGHTS RESERVED.  Unauthorised Use is Prohibited.</p>
+</footer>
+
+
+
+</body></html>

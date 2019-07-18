@@ -1,0 +1,3 @@
+https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:73:e2:10&wlan=RI-WLAN&statusCode=5&redirect=riwlan.ri.edu.sg&username=a&password=b
+
+

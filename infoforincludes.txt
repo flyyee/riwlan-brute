@@ -1,0 +1,16 @@
+vc++ directories:
+include directories: 
+C:\Users\Gerrard\Documents\Visual Studio 2017\Projects\_newscrape\newscrape\include;$(IncludePath)
+
+library directories:
+C:\Users\Gerrard\Documents\Visual Studio 2017\Projects\_newscrape\newscrape\lib;$(LibraryPath)
+
+additional include directories:
+C:\Users\Gerrard\Documents\Visual Studio 2017\Projects\_newscrape\newscrape\include;%(AdditionalIncludeDirectories)
+
+
+linker:
+input:
+additional dependencies:
+libcurl.lib;%(AdditionalDependencies)
+

@@ -1,0 +1,85 @@
+
+<!-- saved from url=(0036)https://riwlan.ri.edu.sg/logout.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style>
+<!--
+h1 {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	color: #787a7f;
+	font-size: 19px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+td {
+	font-family: Arial, Helvetica, sans-serif;
+//	font-size: 13px;
+//	font-weight: bold;
+	color: #000000;
+	padding: 10px 5px 0px 0px;
+}
+td.caption {
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	padding: 2px;
+}
+input.button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #c9cbd4;
+	color: #333333;
+	width: 80px;
+}
+-->
+</style>
+<script language="javascript" src="./Logout_files/loginscript.js.download"></script>
+<script>
+function checkUserStatus(){
+// Check Illegal Access of logout Page
+// if userStatus == 0, it means user hasn't logged in
+// so just redirect the user to login.html page
+    if(document.forms[0].userStatus.value == 0){
+        location.href = "login.html";
+    }
+}
+</script>
+<meta http-equiv="Pragma" content="no-cache">
+
+<title>Logout</title>
+</head>
+<body bgcolor="#DADCE5" onload="checkUserStatus()">
+<form method="post" action="https://riwlan.ri.edu.sg/logout.html">
+  <div align="center">
+    <h1>Web Authentication</h1>
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tbody><tr>
+        <td align="center" class="caption">
+	  Login Successful !<br><p>
+          You can now use all regular network services over the wireless network.<br></p><p>
+          Please retain this small logout window in order to logoff when done. Note that you can always use the following URL to retrieve this page:<br>
+        
+	
+	      <a href="https://riwlan.ri.edu.sg/logout.html">https://1.1.1.1/logout.html </a></p></td>
+	
+       
+	
+      </tr>
+    <tr>
+        <td align="center">
+          <script>getHtmlForButton("Logout","Logout","button","document.forms[0].submit()"); </script><input type="button" name="Logout" value="Logout" class="button" onclick="document.forms[0].submit()">
+
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+  <input type="hidden" name="userStatus" size="16" maxlength="15" value="1">
+  <input type="hidden" name="err_flag" size="16" maxlength="15" value="0">
+  <input type="hidden" name="err_msg" size="32" maxlength="31" value="">
+
+</form>
+
+
+
+
+</body></html>

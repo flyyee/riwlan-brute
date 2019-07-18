@@ -1,0 +1,13 @@
+http://www.msftconnecttest.com/redirect
+
+
+https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:73:e2:10&client_mac=4e:80:df:6c:e8:08&wlan=RI-WLAN&redirect=www.msftconnecttest.com/redirect
+
+
+https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:73:e2:10&wlan=RI-WLAN&statusCode=5&redirect=www.msftconnecttest.com/redirect
+
+https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:73:e2:10&wlan=RI-WLAN&statusCode=5&redirect=www.msftconnecttest.com/redirect
+
+https://riwlan.ri.edu.sg/fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:73:e2:10&wlan=RI-WLAN&statusCode=5&redirect=www.msftconnecttest.com/redirect
+
+fe80::616e:a387:1622:56a%21

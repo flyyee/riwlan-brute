@@ -1,0 +1,6 @@
+?buttonClicked=4&redirect_url=&err_flag=0&info_flag=0&info_msg=0&username=a&password=b
+
+
+https://riwlan.ri.edu.sg/fs/customwebauth/login.html?buttonClicked=4&redirect_url=&err_flag=0&info_flag=0&info_msg=0&username=a&password=b
+
+

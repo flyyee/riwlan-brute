@@ -1,0 +1,1 @@
+curl -X POST "https://riwlan.ri.edu.sg/login.html" -d "buttonClicked=4&redirect_url=www.msftconnecttest.com&err_flag=0&info_flag=0&info_msg=0&err_msg=0&username=22ytail608i&password=iji6mvrs"

@@ -1,0 +1,22 @@
+99999999Hello World!
+<html>
+<head>
+<title>Web Authentication Failure</title>
+<meta HTTP-EQUIV="REFRESH" content="0; u
+000000b4
+rl=fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:53:cd:40&wlan=RI-WLAN&statusCode=5&redirect=www.msftconnecttest.com">
+</head>
+</html>
+
+0
+
+rl=fs/customwebauth/login.html?switch_url=https://riwlan.ri.edu.sg/login.html&ap_mac=a0:ec:f9:53:cd:40&wlan=RI-WLAN&statusCode=5&redirect=www.msftconnecttest.com">
+</head>
+</html>
+
+0
+
+
+C:\Users\Gerrard\Documents\Visual Studio 2017\Projects\bruter\bruter\Debug\bruter.exe (process 1232) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

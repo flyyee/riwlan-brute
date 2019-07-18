@@ -1,0 +1,47 @@
+<script>
+function entsub(event) {
+console.log("here")
+  if (event && event.which == 13) {
+  //called when enter is inputted
+  console.log("good13")
+  	submitAction();
+    //login_form.submit();
+  } else {
+    return true;
+	}
+}
+</script>
+
+<script>
+function submitAction(){
+console.log("tp")
+      var link = document.location.href;
+      var searchString = "redirect=";
+      var equalIndex = link.indexOf(searchString);
+	  console.log(link) // url
+	  console.log(searchString) // redirect=
+	  console.log(equalIndex) // index of redirect= url
+      var redirectUrl = "";
+      var urlStr = "";
+      if(equalIndex > 0) {
+            equalIndex += searchString.length;
+            urlStr = link.substring(equalIndex);
+			console.log(urlStr) // redirect= url
+            if(urlStr.length > 0){
+				redirectUrl += urlStr; // sets redirecturl to redirect= url
+  			    if(redirectUrl.length > 255)
+				    redirectUrl = redirectUrl.substring(0,255);
+			    document.forms[0].redirect_url.value = redirectUrl; // sets hidden input to redirecturl
+			}
+      }
+
+      document.forms[0].buttonClicked.value = 4; // sets hidden input to 4
+      document.forms[0].submit(); // submits form
+}
+</script>
+
+<form method="GET" action="https://riwlan.ri.edu.sg/login.html">
+<input type="hidde" name="redirect_url" size="255" maxlength="255" value="">
+<input type="text" onkeypress="return entsub(event)">
+<input type="submit">
+</form>

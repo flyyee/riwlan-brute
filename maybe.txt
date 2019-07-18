@@ -1,0 +1,3 @@
+go to local node hosted server
+redirect ip in hosts file to malicious url address
+host login form on server
